@@ -1,0 +1,7 @@
+.box{
+    border: red fluid 2px ;
+}
+
+.box-col{
+    border: 2px fluid green;
+}
