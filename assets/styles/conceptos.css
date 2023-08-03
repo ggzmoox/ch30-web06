@@ -1,7 +1,12 @@
 .box{
-    border: red fluid 2px ;
+    border:2px solid red;
 }
 
 .box-col{
-    border: 2px fluid green;
+    border:2px solid green;
+}
+
+.box-row {
+    border: 2px solid purple;
+    min-height:  300px;
 }
