@@ -31,3 +31,7 @@ function isValidColor(color) {
     return s.color === color;
 }
 
+function changeColorWithPromt(elementHtml){
+    const color = prompt("Dime el color en ingles", "yellow");
+    changeColor1( elementHtml, color);
+}
