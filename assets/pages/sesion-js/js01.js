@@ -74,5 +74,29 @@ const myObj ={
 
 console.log( myObj )
 
-// ---------------------------------------------------------------------------------------------------------
+// ----------------------------- Objetos em JavaScript ----------------------------------------------
+// tipo Array
+const cancionesCh30 = ["Highway Star", "Trouble", "Saoko", "Rock Dj"];
 
+// Tipos de datos object
+const misDatosDePerfil = {
+    name: "David",
+    lastName: "Olea",
+    age: 29,
+    isBelicoso: false,
+    fullName: function(){
+        return `Nombre completo de David: ${this.name} ${this.lastName}`; 
+    },
+    //Agregar una funcion que muestre el nombre completo en mayusculas
+
+    fullNameMayus: function(){
+        /* return `Nombre completo de David en Mayusculas: ${this.name.toUpperCase()} ${this.lastName.toUpperCase()}`;  */
+        return this.fullName().toUpperCase();
+    }
+}
+
+console.log(misDatosDePerfil);
+console.table(misDatosDePerfil);
+console.log(misDatosDePerfil.fullName); // f()
+console.log(misDatosDePerfil.fullName()); // David Olea
+console.log(misDatosDePerfil.fullNameMayus()); // DAVID OLEA
