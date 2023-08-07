@@ -56,3 +56,23 @@ myVarNull = "No me gusta YLE";
 console.log(`Tipo de datos myVarNull: ${ typeof myVarNull }`); // string
 myVarNull = null;
 console.log(`Tipo de dato myVarNull: ${ typeof myVarNull }`); // object
+console.log(`myVarNull es null: ${ myVarNull === null }`); // object
+
+// tipo de dato symbol
+// representa un valor único que se puede utilizar como clave en objetos o indentificador unico
+const mySymbol = Symbol();
+const mySymbol2 = Symbol();
+const myKey = "codigo";
+console.log( `mySymbol === mySymbol2  ${ mySymbol === mySymbol2 }`);
+
+const myObj ={
+    clave:"valor",
+    [mySymbol] : 16, // se creará una clave privada, esta no se itera con un ciclo, no se almacena LocalStorage
+    myKey : 123,
+    [myKey] : 567,
+}
+
+console.log( myObj )
+
+// ---------------------------------------------------------------------------------------------------------
+
