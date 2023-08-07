@@ -125,3 +125,33 @@ console.log (`Valor de la sumatoria ${10 + Number(myAgeTxt)}`); // 39
 console.log (`Valor de la sumatoria ${10 + parseInt(myAgeTxt)}`); // 39
 console.log (`Valor de la sumatoria ${10 + parseFloat(myAgeTxt)}`); // 39
 console.log (`Valor de la sumatoria ${10 + (+myAgeTxt)}`); // 39
+
+// Diferencias entre usar Number() y pasdeInt()
+// - Number convierte enteros y decimales
+// - parseInt convierte solo enteros
+console.log(parseInt(100.567)); //100
+// - Number devuelve NaN si la cadena contiene algún caracter no numerico
+// - ParseInt convierte los enteros hasta encontrar un caracter no númerico
+//   Si la entrada no comieza con un valor númerico, devuelve, devuelve NaN
+console.log(Number("123 - 456")) // NaN
+console.log(parseInt("123 - 456")) // 123
+console.log(parseInt("$123 - 456")) // NaN
+console.log(parseInt("$123 - 456".slice(1))) // 123
+console.log(Number(true)) // 1
+console.log(parseInt(true)) // NaN
+
+// Conversión a booleano
+// En la conversion de boolean los siguientes valores son false:
+// "", 0, null, indefined
+console.log("Boolean(1)" + Boolean(1)); // True
+console.log("Boolean(1000)" + Boolean(1000)); // True
+console.log("Boolean('Hola)" + Boolean('Hola')); // True
+console.log("Boolean('false')" + Boolean("false")); // True
+const isBelicoso = "false";
+
+// Number
+// [] -> 0 , [30] -> 30, [30,33] -> NaN, false -> 0, true -> 1
+// String
+// [] -> "" , [12,2] -> "12,2", function(){} -> "funtion(){}", {} -> [object, object]
+
+console.log ( String( JSON.stringify( {name:"sergio"}) ));
