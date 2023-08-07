@@ -100,3 +100,28 @@ console.table(misDatosDePerfil);
 console.log(misDatosDePerfil.fullName); // f()
 console.log(misDatosDePerfil.fullName()); // David Olea
 console.log(misDatosDePerfil.fullNameMayus()); // DAVID OLEA
+
+
+//------------------------------- Conversion explicita de datos -------------------------------------------
+const horaDescanso= 13.05;
+console.log ("Hora Descanso " + horaDescanso + "h."); // concatenacion
+const horaDescansoTxt= String( horaDescanso );
+console.log ("Hora Descanso " + horaDescansoTxt + "h.");
+console.log ("Hora de Retorno " + horaDescanso + .15);
+
+const colorVerde = 0x008000; // Representacion Decimal
+console.log(`El valor RGB del color verde es: ${colorVerde}`); // 32768
+console.log(`El valor RGB del color verde es: ${colorVerde.toString()}`); // 32768
+console.log(`El valor RGB del color verde es: ${colorVerde.toString(16)}`); // 8000
+console.log(`El valor RGB del color verde es: #${colorVerde.toString(16).padStart(6, "0")}`); // #008000
+
+/* conversion a number */
+
+const myAgeTxt = "29";
+const sumatoria = 10 + myAgeTxt; //
+console.log (`Valor de la sumatoria ${sumatoria}`); // 1025
+
+console.log (`Valor de la sumatoria ${10 + Number(myAgeTxt)}`); // 39
+console.log (`Valor de la sumatoria ${10 + parseInt(myAgeTxt)}`); // 39
+console.log (`Valor de la sumatoria ${10 + parseFloat(myAgeTxt)}`); // 39
+console.log (`Valor de la sumatoria ${10 + (+myAgeTxt)}`); // 39
