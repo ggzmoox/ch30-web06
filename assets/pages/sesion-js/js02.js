@@ -244,3 +244,88 @@ console.log(`Cantidad de letras 'p' : ${ counterCharacter(phasePP, "p") } `); //
 console.log(`Cantidad de letras 'p' : ${ counterCharacter(phasePP, "p") + counterCharacter(phasePP, "P") } `); // 13
 console.log(`Cantidad de letras 'p' : ${ counterCharacterUnsensitive(phasePP, "p") } `); // 13
 console.log(`Cantidad de letras(mau) 'p' : ${ contarLetrasP(phasePP) } `); // 13
+
+// -------------- Recursividad ---------------------
+/*
+  Una función recursiva es una función que se llama así misma durante su ejecución.
+
+  Se utilizan en algoritmos y soluciones que se basan en la división y conquista
+  como cálculos matemáticos, recorrido de estructura de datos y algoritmos de búsqueda
+  y ordenamiento.
+
+  Patrón:
+    function nombreFuncionRecursiva( parametro  ){
+        if( condicionParo){
+            return expresión;
+        }
+        else {
+            // llamada recursiva
+            nombreFuncion( nuevoParametro );
+        }
+    }
+*/
+
+
+//......... Cálculo del factorial de un número usando ciclo for ...............
+function factorialConCicloFor( numero ) {
+    let factorial = 1;
+    
+    for (let i = numero; i > 0; i--) {// i = i - 1
+        console.log(`factorial: ${factorial} * ${i} = ${factorial*i}`)
+        factorial = factorial * i; 
+    }
+return factorial;
+}
+    
+    console.log(`El factorial de 5 es: ${factorialConCicloFor(5)}`) // 1*2*3*4*5 = 120
+
+//......... Cálculo del factorial de un número usando recursividad ...............
+
+function factorConRecursividad(numero){
+    if (numero === 1) {
+        return 1;
+    } else {
+        console.log(`factorial: ${numero} * ${numero - 1}`)
+        return numero * factorConRecursividad(numero - 1); 
+    }
+}
+
+console.log(`El factorial recursivo de 5 es:
+${factorConRecursividad(5)}`);
+
+// --------------------------------- Saludar con recursividad ------------------------------
+
+/* 
+ Generar una función recursiva que muestre en consola un saludo
+ donde se indique el numero saludo deseado
+
+ ej: saludar 10 veces
+
+saludo 1
+saludo 2
+saludo 3
+...
+saludo 9
+saludo 10
+
+*/
+
+function saludo2(numeroSaludo){
+if (numeroSaludo === 0) {
+    return 1;
+} else {
+        console.log(`Saludo: ${numeroSaludo}`)
+        return numeroSaludo * saludo2 (numeroSaludo - 1);
+}
+
+}
+saludo2(10);
+
+function saludo1( numeroSaludo ) {
+    if(  numeroSaludo === 10)
+        return console.log("Saludo " + numeroSaludo + " ");
+    else
+        return console.log("Saludo " + numeroSaludo + " ") +  saludo1( numeroSaludo+1 );
+}
+
+saludo1(1);
