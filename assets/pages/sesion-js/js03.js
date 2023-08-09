@@ -159,4 +159,65 @@ console.log(`La velocidad del ventilador está en ${setVelocidadVentilador(1)}`)
 console.log(`La velocidad del ventilador está en ${setVelocidadVentilador(8)}`); // no existe
 console.log(`valor: 2 ${setVelocidadVentilador(2)}`); // velocidad media
 console.log(`valor: "2" ${setVelocidadVentilador("2")}`); // velocidad media
-console.log(`valor: ? ${setVelocidadVentilador( prompt("Velocidad", 1))}`); // Velocidad baja
+// console.log(`valor: ? ${setVelocidadVentilador( prompt("Velocidad", 1))}`); // Velocidad baja
+
+
+// Ejercicio Estaciones del año
+
+/* 
+Preguntar por el numero de mes  (prompt o DOM), del 1 al 12
+Desplegar de acuerdo al mes un Alert (mostrarlo en el DOM) la estacion del año.
+
+mes 12, 1, 2 = invierno.
+mes 3, 4, 5 = primavera
+mes 6, 7, 8 = verano
+mes 9, 10, 11 = otoño
+
+Realizar una version con if-else-elseif y otra con swtich.
+*/
+
+let numMes = prompt("Ingresa el número de mes y te diré en que estacion te encuentras: ");
+
+if (numMes >= 1 && numMes <= 12) {
+
+
+    if (numMes == 12 || numMes <= 2) {
+        alert("Estás en Invierno");
+    } else if (numMes <= 5) {
+        alert("Estás en Primavera");
+    } else if (numMes <= 8) {
+        alert("Estas en Verano");
+    } else alert("Estas en Otoño")
+
+}
+else {
+    alert("Ingresa un mes válido")
+}
+
+/* con switch */
+
+function seasons(){
+
+    const number = parseInt(prompt("Ingresa el número de mes y te diré en que estacion te encuentras: "));
+    let mensaje2;
+    switch(number){
+        
+        case 1: case 2: case 12: 
+        mensaje2=("Estas en invierno");break;
+
+        case 3: case 4: case 5: 
+        mensaje2=("Estas en primavera");break;
+
+        case 6: case 7: case 8:
+        mensaje2=("Estas en verano");break;
+
+        case 9: case 10: case 11: 
+        mensaje2=("Estas en otoño");break;
+
+        default: 
+        mensaje2=("Numero no valido!");break;
+    }
+    console.log(`${mensaje2}`); 
+}
+
+seasons();
