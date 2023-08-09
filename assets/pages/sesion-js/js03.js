@@ -159,4 +159,4 @@ console.log(`La velocidad del ventilador está en ${setVelocidadVentilador(1)}`)
 console.log(`La velocidad del ventilador está en ${setVelocidadVentilador(8)}`); // no existe
 console.log(`valor: 2 ${setVelocidadVentilador(2)}`); // velocidad media
 console.log(`valor: "2" ${setVelocidadVentilador("2")}`); // velocidad media
-console.log(`valor: ? ${setVelocidadVentilador()}`); // apagado
+console.log(`valor: ? ${setVelocidadVentilador( prompt("Velocidad", 1))}`); // Velocidad baja
