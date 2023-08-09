@@ -221,3 +221,24 @@ function seasons(){
 }
 
 seasons();
+
+
+// ------------------------ Operador ternario --------------------------
+/*
+ Es el único operador de JavaScript que tiene 3 operandos.
+ Generalmente se utiliza como opción a la sentencia if-else.
+
+ Sintaxis:
+  condición ? expresiónSiCondiciónEsVerdadera : expresionSiCondiciónEsFalsa; 
+
+*/
+const pagoTarjetaCredito = true;
+
+/*
+let msj;
+if ( pagoTarjetaCredito ) msj= "A realizado el pago de su TC";
+else msj = "No ha realizado el pago de TC";
+*/
+const msj = pagoTarjetaCredito ? "A realizado el pago de TC" : "No ha realizado el pago de TC";
+
+console.log(`El usuario ${msj}`);
