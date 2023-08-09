@@ -252,4 +252,14 @@ console.log(`El usuario ${msj}`);
 */
 const ageUser= prompt("Escribe tu edad: ");
 alert(ageUser >=18 ? "El usuario es mayor de edad" : "El usuario no es mayor de edad");
-/* console.log(`${msg}`); */
+
+
+//------------------ Calculo del factorial de un numero usando recursividad y valor ternario-------------
+
+function factorConRecursividad(numero){
+
+    return numero < 1 ?  1 : numero * factorConRecursividad(numero - 1);
+    
+}
+
+console.log(`El factorial recursivo de 5 es: ${factorConRecursividad(5)}`);
