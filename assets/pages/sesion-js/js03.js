@@ -242,3 +242,14 @@ else msj = "No ha realizado el pago de TC";
 const msj = pagoTarjetaCredito ? "A realizado el pago de TC" : "No ha realizado el pago de TC";
 
 console.log(`El usuario ${msj}`);
+
+//--------------------------mini ejercicio--------------------
+
+/* 
+    Preguntar con prompt la edad del usuario:20
+    si es >=18 indicar en la consola "el usuario es mayor de edad";
+    si no cumple la condicion "El usuario no es mayor de edad";
+*/
+const ageUser= prompt("Escribe tu edad: ");
+alert(ageUser >=18 ? "El usuario es mayor de edad" : "El usuario no es mayor de edad");
+/* console.log(`${msg}`); */
