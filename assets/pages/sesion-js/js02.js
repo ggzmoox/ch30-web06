@@ -329,3 +329,43 @@ function saludo1( numeroSaludo ) {
 }
 
 saludo1(1);
+
+//--------------------------------------------------------------------------------------------
+
+function saludoz( numeroSaludo){
+    if( numeroSaludo === 1){
+        return `Saludo ${numeroSaludo}`;
+    }
+    else {
+        // llamada recursiva
+        console.log(`Saludo ${numeroSaludo}`)
+        return saludoz( numeroSaludo - 1 );
+    }
+}
+console.log("****** Saludo Descendente ******");
+console.log(saludoz(10));
+
+// -------------------------------------------------
+function saludoRecursivo( numeroSaludo ) {
+    if(numeroSaludo > 1){
+        saludoRecursivo( numeroSaludo - 1)
+        console.log(`Saludo ${numeroSaludo}`);
+    }
+    else{
+        console.log(`Saludo ${numeroSaludo}`);
+    }
+}
+/*
+        //    REFACTORIZADO
+function saludoRecursivo( numeroSaludo ) {
+    if(numeroSaludo > 1){
+        saludoRecursivo( numeroSaludo - 1)     
+    }    
+        console.log(`Saludo ${numeroSaludo}`);    
+}
+*/
+console.log("****** Saludo Ascendente ******");
+saludoRecursivo(10);
+
+
+
