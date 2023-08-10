@@ -79,3 +79,47 @@ personasEnCh30.forEach( (equipo, indexEquipo) =>
  
 // Solo se imprimi el elemento (persona)                    
 //personasEnCh30.forEach( equipo => equipo.forEach( persona=> console.log(`${persona}`)));
+
+// Realizar tablas de multiplicar de 1 al 5 con for tradicional
+/* 
+1 * 1 = 1
+1 * 2 = 2
+
+...
+
+5 * 9 = 45 
+5 * 10 = 50
+*/
+
+rompeCicloSuperior:
+for (let i = 1; i < i <= 5; i++) {
+
+    for (let j=1; j<=10; j++){
+        if (i===2 && j===5) break rompeCicloSuperior;
+        console.log(`${i} * ${j} = ${i*j}`);
+        
+    }
+    
+}
+
+//------------------- uso de continue-------------------
+
+/* 
+Termina la ejecucion en la iteracion actual y continua con la próxima iteración.
+(o en el tag que se identifique).
+*/
+
+console.log("======== Uso de break con tag ========")
+// Realizar la multiplicacion hasta en 3
+// 1*1, 1*2, 1*3 ... 2*3...5*3
+
+continuaCicloSuperior:
+for (let i = 1; i <= 5; i++) {
+
+    for (let j=1; j<=10; j++){
+        if (j>3) continue continuaCicloSuperior;
+        console.log(`${i} * ${j} = ${i*j}`);
+        
+    }
+}
+
