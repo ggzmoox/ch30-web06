@@ -38,23 +38,63 @@ const findElementByQuerySelector = () =>{
 }
 findElementByQuerySelector();
 
-//------------------------------ Crear nuevo elemento HTML --------------------------
+//----------------- Crear nuevo elemento HTML --------------------------
 // appendChild
 
 const newElement = () =>{
-  const newElement = document.createElement("div"); //<div></div>
+  const newElement = document.createElement ("div"); // <div>    </div>
 
-  newElement.innerHTML = `La ch30 le guta:
-  <ul>
-     <li> El Helado </li> 
-     <li> El Chisme </li> 
-     <li> Los corridos tumbados </li> 
-     <li> Escuchar a mau </li> 
-     <li> Ser mejores amigos de Anneth </li> 
-  </ul>
+  newElement.innerHTML = `La Ch30 le gusta:
+   <ul>
+      <li> El Helado </li>
+      <li> El Chisme </li>
+      <li> Los corridos tumbados </li>
+      <li> Escuchar a Mau </li>
+      <li> Ser mejores amigos de Anneth </li>
+   </ul>
   `;
-  const descriptionCh30 = document.querySelector("#decriptionCh30");
-  descriptionCh30.appendChild(newElement);
+
+  const descriptionCh30 = document.querySelector("#descriptionCh30");
+  descriptionCh30.appendChild( newElement );
 }
 
 newElement();
+
+// ---------------- Cambiar el color de texto -----------------
+// style.color
+
+const changeColor = ( color ) => {
+  const descriptionCh30 = document.getElementById("descriptionCh30");
+  descriptionCh30.style.color = color; // Cambio de color de fuente
+  descriptionCh30.style.border = `thin solid ${color}`;
+
+}
+
+changeColor( "beige" );
+
+// ------------------ Propiedades de visualización ---------------
+//                       Desaparecer el elemento
+// display : none (quitar el elemento del DOM)
+// visibility: hidden (ocultar el elemento)
+
+const getReferenceTitleGeneration = () => {
+return document.getElementById("generation");
+}
+
+const displayNoneElement = () => {
+const generation = getReferenceTitleGeneration();
+generation.style.display = "none"; // quitar el elemento
+}
+
+const hiddenElement = () => {
+  const generation = getReferenceTitleGeneration();
+  generation.style.visibility = "hidden"  // ocultar el elemento
+}
+
+const resetElements = () => {
+  const generation = getReferenceTitleGeneration();
+  generation.style.visibility = "visible"; 
+  generation.style.display = "inline"; 
+
+}
+
